@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Pad Thai",
+    "image": "https://i.ibb.co/6800zTX/delicious-italian-food.jpg",
+    "category": "Thai",
+    "price": 10.5,
+    "quantity": 40,
+    "madeby": "Chef Nong",
+    "origin": "Thailand",
+    "description": "Pad Thai is a flavorful Thai stir-fried noodle dish made with rice noodles, tofu, shrimp or chicken, bean sprouts, peanuts, and eggs, seasoned with a blend of tamarind, fish sauce, and palm sugar."
+  },
+  {
+    "name": "Margherita Pizza",
+    "image": "https://i.ibb.co/nmHwc20/fried-chicken-french-fries-white-plate.jpg",
+    "category": "Pizza",
+    "price": 14.99,
+    "quantity": 35,
+    "madeby": "Pizzaiolo Antonio",
+    "origin": "Italy",
+    "description": "The Margherita pizza is a traditional Italian pizza topped with fresh, ripe tomatoes, mozzarella cheese, fresh basil leaves, and a drizzle of extra-virgin olive oil on a thin, crispy crust."
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "image": "https://i.ibb.co/6r5j0NH/tagliatelle-pasta-with-tomatoes-chicken.jpg",
+    "category": "Indian",
+    "price": 13.75,
+    "quantity": 45,
+    "madeby": "Chef Patel",
+    "origin": "India",
+    "description": "Chicken Tikka Masala is a popular Indian dish consisting of marinated and grilled chicken pieces, served in a rich, creamy, and spiced tomato sauce."
+  },
+  {
+    "name": "Caesar Salad",
+    "image": "https://i.ibb.co/qR195CY/tasty-top-view-sliced-pizza-italian-traditional-round-pizza.jpg",
+    "category": "Salad",
+    "price": 8.99,
+    "quantity": 55,
+    "madeby": "Chef Maria",
+    "origin": "Mexico",
+    "description": "A classic Caesar Salad consists of crisp romaine lettuce, croutons, shaved parmesan cheese, and is dressed with a zesty Caesar dressing."
+  },
+  {
+    "name": "Beef Stir-Fry",
+    "image": "https://i.ibb.co/kqf8PY2/delicious-burger-with-many-ingredients-isolated-white-background-tasty-cheeseburger-splash-sauce.jpg",
+    "category": "Chinese",
+    "price": 12.25,
+    "quantity": 40,
+    "madeby": "Chef Lee",
+    "origin": "China",
+    "description": "The Beef Stir-Fry is a delectable Chinese dish featuring thinly sliced beef, stir-fried with a colorful array of fresh vegetables such as bell peppers, broccoli, and carrots."
+  },
+  {
+    "name": "Lasagna",
+    "image": "https://i.ibb.co/nmHwc20/fried-chicken-french-fries-white-plate.jpg",
+    "category": "Italian",
+    "price": 11.5,
+    "quantity": 30,
+    "madeby": "Nonna Lucia",
+    "origin": "Italy",
+    "description": "A classic Italian dish, Lasagna features layers of wide pasta sheets, Bolognese sauce made with ground meat and tomatoes, creamy béchamel sauce, and a generous amount of melted cheese."
+  },
+  {
+    "name": "Shrimp Tacos",
+    "image": "https://i.ibb.co/qR195CY/tasty-top-view-sliced-pizza-italian-traditional-round-pizza.jpg",
+    "category": "Mexican",
+    "price": 10.99,
+    "quantity": 25,
+    "madeby": "Chef Alejandro",
+    "origin": "Mexico",
+    "description": "Shrimp Tacos are a Mexican delight consisting of succulent grilled or sautéed shrimp nestled in warm tortillas."
+  },
+  {
+    "name": "Chicken Alfredo",
+    "image": "https://i.ibb.co/6XdKgdP/farfalle-pasta-with-meatballs-spinach-sauce-with-fried-chickpeas.jpg",
+    "category": "Italian",
+    "price": 13.99,
+    "quantity": 30,
+    "madeby": "Chef Isabella",
+    "origin": "Italy",
+    "description": "Chicken Alfredo is a sumptuous Italian dish featuring fettuccine pasta generously coated in a velvety Alfredo sauce."
+  },
+  {
+    "name": "Fish and Chips",
+    "image": "https://i.ibb.co/6XdKgdP/farfalle-pasta-with-meatballs-spinach-sauce-with-fried-chickpeas.jpg",
+    "category": "British",
+    "price": 11.5,
+    "quantity": 40,
+    "madeby": "Chef William",
+    "origin": "United Kingdom",
+    "description": "Fish and Chips is a traditional British dish consisting of fresh, flaky white fish, typically cod or haddock, dipped in a light, crispy batter and deep-fried until golden."
+  },
+  {
+    "name": "Miso Soup",
+    "image": "https://i.ibb.co/6r5j0NH/tagliatelle-pasta-with-tomatoes-chicken.jpg",
+    "category": "Japanese",
+    "price": 5.99,
+    "quantity": 50,
+    "madeby": "Chef Aiko",
+    "origin": "Japan",
+    "description": "Miso Soup is a traditional Japanese soup made from dashi stock, a soybean paste called miso, tofu cubes, seaweed, and chopped green onions."
+  },
+  {
+    "name": "Tandoori Chicken",
+    "image": "https://i.ibb.co/6r5j0NH/tagliatelle-pasta-with-tomatoes-chicken.jpg",
+    "category": "Indian",
+    "price": 12.75,
+    "quantity": 35,
+    "madeby": "Chef Singh",
+    "origin": "India",
+    "description": "Tandoori Chicken is a well-known Indian dish made by marinating chicken in a blend of yogurt and aromatic spices."
+  },
+  {
+    "name": "Ramen Bowl",
+    "image": "https://i.ibb.co/h16sGby/farfalle-pasta-with-seafood-cherry-tomatoes-green-peas.jpg",
+    "category": "Japanese",
+    "price": 9.5,
+    "quantity": 45,
+    "madeby": "Chef Hiroshi",
+    "origin": "Japan",
+    "description": "A steaming bowl of Ramen, a Japanese noodle soup, served in a flavorful broth with slices of tender pork, a soft-boiled egg, seaweed, and chopped green onions."
+  },
+  {
+    "name": "BBQ Ribs",
+    "image": "https://i.ibb.co/6r5j0NH/tagliatelle-pasta-with-tomatoes-chicken.jpg",
+    "category": "American",
+    "price": 16.99,
+    "quantity": 20,
+    "madeby": "Chef Jackson",
+    "origin": "United States",
+    "description": "BBQ Ribs are succulent, slow-cooked pork ribs coated in a smoky barbecue sauce."
+  },
+  {
+    "name": "Hawaiian Pizza",
+    "image": "https://i.ibb.co/6XdKgdP/farfalle-pasta-with-meatballs-spinach-sauce-with-fried-chickpeas.jpg",
+    "category": "Pizza",
+    "price": 13.5,
+    "quantity": 25,
+    "madeby": "Pizzaiolo Luigi",
+    "origin": "Italy",
+    "description": "Hawaiian Pizza features a thin crust topped with tomato sauce, mozzarella cheese, ham, and chunks of pineapple."
+  },
+  {
+    "name": "Pho",
+    "image": "https://i.ibb.co/6800zTX/delicious-italian-food.jpg",
+    "category": "Vietnamese",
+    "price": 11.25,
+    "quantity": 30,
+    "madeby": "Chef Mai",
+    "origin": "Vietnam",
+    "description": "Pho is a traditional Vietnamese noodle soup made with a flavorful broth, rice noodles, and thinly sliced beef or chicken."
+  },
+  {
+    "name": "Falafel Wrap",
+    "image": "https://i.ibb.co/nmHwc20/fried-chicken-french-fries-white-plate.jpg",
+    "category": "Middle Eastern",
+    "price": 8.75,
+    "quantity": 40,
+    "madeby": "Chef Ahmed",
+    "origin": "Lebanon",
+    "description": "A Falafel Wrap consists of crispy chickpea falafel balls tucked into warm pita bread, along with hummus, fresh vegetables, and a drizzle of tahini sauce."
+  },
+  {
+    "name": "Steak Frites",
+    "image": "https://i.ibb.co/qR195CY/tasty-top-view-sliced-pizza-italian-traditional-round-pizza.jpg",
+    "category": "French",
+    "price": 19.5,
+    "quantity": 15,
+    "madeby": "Chef Pierre",
+    "origin": "France",
+    "description": "Steak Frites is a classic French dish featuring a tender, grilled steak served with a generous portion of golden and crispy French fries."
+  },
+  {
+    "name": "Eggplant Parmesan",
+    "image": "https://i.ibb.co/Z8m8NFj/delicious-fried-chicken-plate.jpg",
+    "category": "Italian",
+    "price": 12.99,
+    "quantity": 20,
+    "madeby": "Chef Giovanni",
+    "origin": "Italy",
+    "description": "Eggplant Parmesan consists of sliced eggplant pieces that are breaded, fried until golden, and layered with marinara sauce and melted cheese."
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "image": "https://i.ibb.co/s3t5j5t/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese.jpg",
+    "category": "Pasta",
+    "price": 12.99,
+    "quantity": 50,
+    "madeby": "Chef Giovanni",
+    "origin": "Italy",
+    "description": "A classic Italian pasta dish made with spaghetti, eggs, Pecorino Romano cheese, pancetta, and black pepper."
+  },
+  {
+    "name": "Sushi Combo",
+    "image": "https://i.ibb.co/kqf8PY2/delicious-burger-with-many-ingredients-isolated-white-background-tasty-cheeseburger-splash-sauce.jpg",
+    "category": "Japanese",
+    "price": 24.5,
+    "quantity": 30,
+    "madeby": "Sushi Master Takahashi",
+    "origin": "Japan",
+    "description": "An assorted selection of sushi including nigiri and maki rolls."
+  }
+]

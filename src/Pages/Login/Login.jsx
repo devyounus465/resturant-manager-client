@@ -19,6 +19,12 @@ const Login = ({ children }) => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        swal({
+          title: "Good job!",
+          text: "Login Successfull!",
+          icon: "success",
+          button: "ok",
+        });
       })
       .catch((err) => {
         const errMessage = err.message;

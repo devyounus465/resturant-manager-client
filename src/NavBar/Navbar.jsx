@@ -9,7 +9,7 @@ const Navbar = ({ children }) => {
   };
   return (
     <div className=" shadow">
-      <div className="navbar bg-base-100 lg:w-[1200px] mx-auto">
+      <div className="navbar bg-base-100 lg:max-w-[1200px] mx-auto">
         <div className="flex-1">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,7 +51,13 @@ const Navbar = ({ children }) => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a className=" ">
+            <img
+              className="w-[75px]"
+              src="https://i.ibb.co/WHfZCB5/vecteezy-vintage-grilled-barbecue-logo-retro-bbq-vector-fire-grill-6735686-Converted.png"
+              alt=""
+            />
+          </a>
         </div>
         <div className="flex-none gap-2">
           <div className="navbar-center hidden lg:flex">
@@ -121,16 +127,13 @@ const Navbar = ({ children }) => {
                 className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
+                  <Link to={"/myitem"}>My added food items</Link>
                 </li>
                 <li>
-                  <a>Settings</a>
+                  <Link to={"/additem"}>Add a food item</Link>
                 </li>
                 <li>
-                  <a>Logout</a>
+                  <Link to={"/orderedfood"}>My ordered food items</Link>
                 </li>
               </ul>
             </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import swal from "sweetalert";
+import axios from "axios";
 
 const Register = ({ children }) => {
   const { createUser } = useContext(AuthContext);
@@ -15,6 +16,8 @@ const Register = ({ children }) => {
     const email = form.email.value;
     const photourl = form.photourl.value;
     const password = form.password.value;
+
+    const user = { name, email, photourl, password };
 
     //   rest error
     setSignUpError("");
@@ -48,7 +51,7 @@ const Register = ({ children }) => {
         //   success toast
         swal({
           title: "Good job!",
-          text: "You clicked the button!",
+          text: "Registration successfull!",
           icon: "success",
           button: "ok",
         });
@@ -57,6 +60,11 @@ const Register = ({ children }) => {
         const errMessage = error.message;
         console.log(errMessage);
       });
+
+    // register information send to server and database
+    axios.post("http://localhost:5000/users", user).then((res) => {
+      console.log(res.data);
+    });
   };
 
   signupError &&
