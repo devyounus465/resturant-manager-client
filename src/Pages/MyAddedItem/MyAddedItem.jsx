@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link, useLoaderData } from "react-router-dom";
-import FoodCard from "../../Components/FoodCard/FoodCard";
+import MyAddedCard from "../../Components/MyAddedCard/MyAddedCard";
 
 const MyAddedItem = ({ children }) => {
   const { user } = useContext(AuthContext);
@@ -36,8 +36,8 @@ const MyAddedItem = ({ children }) => {
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
-          {myFoods.map((food) => (
-            <FoodCard food={food} key={food._id}></FoodCard>
+          {myFoods.map((myfood) => (
+            <MyAddedCard key={myfood._id} myfood={myfood}></MyAddedCard>
           ))}
         </div>
       )}

@@ -19,30 +19,12 @@ const FoodDetails = () => {
     setFooditem(filterFood[0]);
   }, [loaderFoods, id]);
 
+  const cartinfo = { name, image, category, quantity, price, origin, madeby };
+
   // handale add to cart
   const handleAddToCart = () => {
-    // fetch("http://localhost:5000/cart", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(foodItem),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     if (data.insertedId) {
-    //       swal({
-    //         title: "Good job!",
-    //         text: "product Added to Cart!",
-    //         icon: "success",
-    //         button: "Close",
-    //       });
-    //     }
-    //   });
-
     axios
-      .post("http://localhost:5000/cart", foodItem)
+      .post("http://localhost:5000/cart", cartinfo)
       .then((res) => {
         console.log(res.data);
         if (res.data.insertedId) {
@@ -58,7 +40,7 @@ const FoodDetails = () => {
         const error = err.message;
         swal({
           title: "error occurd!",
-          text: "error found",
+          text: error,
           icon: "error",
           button: "Close",
         });

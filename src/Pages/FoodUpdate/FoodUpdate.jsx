@@ -1,18 +1,26 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import axios from "axios";
+import { useLoaderData, useParams } from "react-router-dom";
 import swal from "sweetalert";
+import axios from "axios";
 
-const AddFoodItem = ({ children }) => {
+const FoodUpdate = ({ children }) => {
+  const [updateFood, setUpdateFood] = useState([]);
+  const { _id, name, image, category, quantity, price, description } =
+    updateFood;
   const { user } = useContext(AuthContext);
-  console.log(user);
 
-  // handle added food item
+  const { id } = useParams();
 
-  const handleAddItem = (e) => {
+  const loadedFood = useLoaderData();
+  useEffect(() => {
+    const filterUpdateFood = loadedFood.filter((filter) => filter._id === id);
+    setUpdateFood(filterUpdateFood[0]);
+  }, [loadedFood, id]);
+
+  const handleUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
-
     const name = form.name.value;
     const image = form.image.value;
     const category = form.category.value;
@@ -21,7 +29,7 @@ const AddFoodItem = ({ children }) => {
     const origin = form.origin.value;
     const description = form.description.value;
 
-    const newFood = {
+    const updateFood = {
       name,
       image,
       madeby: user?.displayName,
@@ -35,29 +43,49 @@ const AddFoodItem = ({ children }) => {
 
     //   sent new food item to server
 
-    axios
-      .post("http://localhost:5000/foods", newFood)
-      .then((res) => {
-        console.log(res.data);
-        if (res.data.insertedId) {
+    fetch(`http://localhost:5000/foods/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateFood),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
           swal({
             title: "Good job!",
-            text: "Food Added Successful !",
+            text: "You Updated the Product successfully!",
             icon: "success",
-            button: "Close",
+            button: "Close!",
           });
         }
-      })
-      .catch((err) => {
-        const error = err.message;
-        swal({
-          title: "error occurd!",
-          text: error,
-          icon: "error",
-          button: "Close",
-        });
-        return;
       });
+
+    // axios
+    //   .put(`http://localhost:5000/foods/${_id}`, updateFood)
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     if (res.data.insertedId) {
+    //       swal({
+    //         title: "Good job!",
+    //         text: "Food Update Successful !",
+    //         icon: "success",
+    //         button: "Close",
+    //       });
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     const error = err.message;
+    //     swal({
+    //       title: "error occurd!",
+    //       text: error,
+    //       icon: "error",
+    //       button: "Close",
+    //     });
+    //     return;
+    //   });
   };
 
   return (
@@ -66,22 +94,19 @@ const AddFoodItem = ({ children }) => {
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
-              Add My Food Item
+              Update My Food Item
             </h2>
-            <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-500">
-              Add your own food item in our website
-            </p>
           </div>
 
           <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
             <div className="mt-6 overflow-hidden bg-white rounded-xl">
               <div className="px-6 py-12 sm:p-12">
                 <h3 className="text-3xl font-semibold text-center text-gray-900">
-                  input food details
+                  Update food details
                 </h3>
 
                 <form
-                  onSubmit={handleAddItem}
+                  onSubmit={handleUpdate}
                   action="#"
                   method="POST"
                   className="mt-14"
@@ -97,6 +122,7 @@ const AddFoodItem = ({ children }) => {
                           type="text"
                           name="name"
                           id=""
+                          defaultValue={name}
                           placeholder="Enter your food name"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                         />
@@ -112,6 +138,7 @@ const AddFoodItem = ({ children }) => {
                           type="text"
                           name="image"
                           id=""
+                          defaultValue={image}
                           placeholder="Enter your food url"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                         />
@@ -127,6 +154,7 @@ const AddFoodItem = ({ children }) => {
                           type="text"
                           name="category"
                           id=""
+                          defaultValue={category}
                           placeholder="Enter your food category"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                         />
@@ -174,6 +202,7 @@ const AddFoodItem = ({ children }) => {
                           type="number"
                           name="price"
                           id=""
+                          defaultValue={price}
                           placeholder="Enter your food price"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                         />
@@ -189,6 +218,7 @@ const AddFoodItem = ({ children }) => {
                           type="number"
                           name="quantity"
                           id=""
+                          defaultValue={quantity}
                           placeholder="Enter your food quantity"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                         />
@@ -208,6 +238,7 @@ const AddFoodItem = ({ children }) => {
                           type="text"
                           name="origin"
                           id=""
+                          defaultValue={origin}
                           placeholder="Enter your Food Origin"
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
                         />
@@ -226,6 +257,7 @@ const AddFoodItem = ({ children }) => {
                         <textarea
                           name="description"
                           id=""
+                          defaultValue={description}
                           placeholder=""
                           className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:border-blue-600 caret-blue-600"
                           rows="4"
@@ -252,4 +284,4 @@ const AddFoodItem = ({ children }) => {
   );
 };
 
-export default AddFoodItem;
+export default FoodUpdate;

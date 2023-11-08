@@ -82,6 +82,18 @@ const Navbar = ({ children }) => {
                   All Food
                 </NavLink>
               </li>
+
+              <li>
+                <NavLink
+                  to={"/order"}
+                  className={({ isActive }) =>
+                    isActive ? "bg-red-500 text-white" : ""
+                  }
+                >
+                  Order
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink
                   to={"/blog"}
@@ -124,7 +136,7 @@ const Navbar = ({ children }) => {
               </label>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                className="mt-3 z-[9] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
               >
                 <li>
                   <Link to={"/myitem"}>My added food items</Link>
