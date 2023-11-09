@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import swal from "sweetalert";
 import axios from "axios";
 
 const Login = ({ children }) => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleSignIn } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -95,6 +95,14 @@ const Login = ({ children }) => {
             </Link>
           </p>
         </form>
+        <div className="text-right mt-4">
+          <button
+            onClick={googleSignIn}
+            className="btn bg-[#F63701] text-white"
+          >
+            Google SignIn
+          </button>
+        </div>
       </div>
     </div>
   );
