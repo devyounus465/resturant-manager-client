@@ -22,9 +22,14 @@ const Login = ({ children }) => {
 
         // get jwt access
 
-        axios.post("http://localhost:5000/jwt", user).then((res) => {
-          console.log(res.data);
-        });
+        axios
+          .post(
+            "https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/jwt",
+            user
+          )
+          .then((res) => {
+            console.log(res.data);
+          });
 
         swal({
           title: "Good job!",

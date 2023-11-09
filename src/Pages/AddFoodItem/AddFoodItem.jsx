@@ -36,7 +36,10 @@ const AddFoodItem = ({ children }) => {
     //   sent new food item to server
 
     axios
-      .post("http://localhost:5000/foods", newFood)
+      .post(
+        "https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods",
+        newFood
+      )
       .then((res) => {
         console.log(res.data);
         if (res.data.insertedId) {

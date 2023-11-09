@@ -23,17 +23,26 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/foods"),
+        loader: () =>
+          fetch(
+            "https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods"
+          ),
       },
       {
         path: "/allfood",
         element: <AllFood></AllFood>,
-        loader: () => fetch("http://localhost:5000/foods"),
+        loader: () =>
+          fetch(
+            "https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods"
+          ),
       },
       {
         path: "/fooddetails/:id",
         element: <FoodDetails></FoodDetails>,
-        loader: () => fetch(`http://localhost:5000/foods`),
+        loader: () =>
+          fetch(
+            `https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods`
+          ),
       },
       {
         path: "/order",
@@ -42,7 +51,10 @@ const router = createBrowserRouter([
             <FoodOrder></FoodOrder>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/cart`),
+        loader: () =>
+          fetch(
+            `https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/cart`
+          ),
       },
       {
         path: "/checkout/:id",
@@ -51,7 +63,10 @@ const router = createBrowserRouter([
             <Checkouts></Checkouts>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/cart`),
+        loader: () =>
+          fetch(
+            `https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/cart`
+          ),
       },
       {
         path: "/update/:id",
@@ -60,7 +75,10 @@ const router = createBrowserRouter([
             <FoodUpdate></FoodUpdate>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/foods`),
+        loader: () =>
+          fetch(
+            `https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods`
+          ),
       },
 
       {
@@ -70,7 +88,10 @@ const router = createBrowserRouter([
       {
         path: "/myitem",
         element: <MyAddedItem></MyAddedItem>,
-        loader: () => fetch(`http://localhost:5000/foods`),
+        loader: () =>
+          fetch(
+            `https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods`
+          ),
       },
       {
         path: "/blog",

@@ -62,9 +62,14 @@ const Register = ({ children }) => {
       });
 
     // register information send to server and database
-    axios.post("http://localhost:5000/users", user).then((res) => {
-      console.log(res.data);
-    });
+    axios
+      .post(
+        "https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/users",
+        user
+      )
+      .then((res) => {
+        console.log(res.data);
+      });
   };
 
   signupError &&

@@ -33,7 +33,10 @@ const FoodDetails = () => {
   // handale add to cart
   const handleAddToCart = () => {
     axios
-      .post("http://localhost:5000/cart", cartinfo)
+      .post(
+        "https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/cart",
+        cartinfo
+      )
       .then((res) => {
         console.log(res.data);
         if (res.data.insertedId) {

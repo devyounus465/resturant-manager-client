@@ -43,13 +43,16 @@ const FoodUpdate = ({ children }) => {
 
     //   sent new food item to server
 
-    fetch(`http://localhost:5000/foods/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateFood),
-    })
+    fetch(
+      `https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateFood),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -64,7 +67,7 @@ const FoodUpdate = ({ children }) => {
       });
 
     // axios
-    //   .put(`http://localhost:5000/foods/${_id}`, updateFood)
+    //   .put(`https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/foods/${_id}`, updateFood)
     //   .then((res) => {
     //     console.log(res.data);
     //     if (res.data.insertedId) {

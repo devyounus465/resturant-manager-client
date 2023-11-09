@@ -38,7 +38,10 @@ const Checkouts = ({ children }) => {
     //   sent new checkout food to server
 
     axios
-      .post("http://localhost:5000/checkouts", checoutInfo)
+      .post(
+        "https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/checkouts",
+        checoutInfo
+      )
       .then((res) => {
         console.log(res.data);
         if (res.data.insertedId) {

@@ -12,22 +12,26 @@ const FoodOrder = () => {
   // handle cart delete
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/cart/${id}`).then((res) => {
-      console.log(res.data);
-      if (res.data.deletedCount > 0) {
-        swal({
-          title: "Good job!",
-          text: "Cart Product deleted successfully!",
-          icon: "success",
-          button: "Close",
-        });
+    axios
+      .delete(
+        `https://resturant-manager-server-kxwj1ll2p-younus-alis-projects.vercel.app/cart/${id}`
+      )
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.deletedCount > 0) {
+          swal({
+            title: "Good job!",
+            text: "Cart Product deleted successfully!",
+            icon: "success",
+            button: "Close",
+          });
 
-        //   cart remaining
+          //   cart remaining
 
-        const remainingCart = foodCart.filter((cart) => cart._id !== id);
-        setFoodCart(remainingCart);
-      }
-    });
+          const remainingCart = foodCart.filter((cart) => cart._id !== id);
+          setFoodCart(remainingCart);
+        }
+      });
   };
 
   return (
