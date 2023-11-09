@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import swal from "sweetalert";
+import axios from "axios";
 
 const Login = ({ children }) => {
   const { signIn } = useContext(AuthContext);
@@ -18,7 +19,13 @@ const Login = ({ children }) => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+
+        // get jwt access
+
+        axios.post("http://localhost:5000/jwt", user).then((res) => {
+          console.log(res.data);
+        });
+
         swal({
           title: "Good job!",
           text: "Login Successfull!",

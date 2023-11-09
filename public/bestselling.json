@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Pad Thai",
+    "image": "https://i.ibb.co/6800zTX/delicious-italian-food.jpg",
+    "category": "Thai",
+    "price": 10.5,
+    "quantity": 40,
+    "madeby": "Chef Nong",
+    "origin": "Thailand",
+    "description": "Pad Thai is a flavorful Thai stir-fried noodle dish made with rice noodles, tofu, shrimp or chicken, bean sprouts, peanuts, and eggs, seasoned with a blend of tamarind, fish sauce, and palm sugar."
+  },
+  {
+    "name": "Margherita Pizza",
+    "image": "https://i.ibb.co/nmHwc20/fried-chicken-french-fries-white-plate.jpg",
+    "category": "Pizza",
+    "price": 14.99,
+    "quantity": 35,
+    "madeby": "Pizzaiolo Antonio",
+    "origin": "Italy",
+    "description": "The Margherita pizza is a traditional Italian pizza topped with fresh, ripe tomatoes, mozzarella cheese, fresh basil leaves, and a drizzle of extra-virgin olive oil on a thin, crispy crust."
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "image": "https://i.ibb.co/6r5j0NH/tagliatelle-pasta-with-tomatoes-chicken.jpg",
+    "category": "Indian",
+    "price": 13.75,
+    "quantity": 45,
+    "madeby": "Chef Patel",
+    "origin": "India",
+    "description": "Chicken Tikka Masala is a popular Indian dish consisting of marinated and grilled chicken pieces, served in a rich, creamy, and spiced tomato sauce."
+  },
+  {
+    "name": "Caesar Salad",
+    "image": "https://i.ibb.co/qR195CY/tasty-top-view-sliced-pizza-italian-traditional-round-pizza.jpg",
+    "category": "Salad",
+    "price": 8.99,
+    "quantity": 55,
+    "madeby": "Chef Maria",
+    "origin": "Mexico",
+    "description": "A classic Caesar Salad consists of crisp romaine lettuce, croutons, shaved parmesan cheese, and is dressed with a zesty Caesar dressing."
+  },
+  {
+    "name": "Beef Stir-Fry",
+    "image": "https://i.ibb.co/kqf8PY2/delicious-burger-with-many-ingredients-isolated-white-background-tasty-cheeseburger-splash-sauce.jpg",
+    "category": "Chinese",
+    "price": 12.25,
+    "quantity": 40,
+    "madeby": "Chef Lee",
+    "origin": "China",
+    "description": "The Beef Stir-Fry is a delectable Chinese dish featuring thinly sliced beef, stir-fried with a colorful array of fresh vegetables such as bell peppers, broccoli, and carrots."
+  },
+  {
+    "name": "Lasagna",
+    "image": "https://i.ibb.co/nmHwc20/fried-chicken-french-fries-white-plate.jpg",
+    "category": "Italian",
+    "price": 11.5,
+    "quantity": 30,
+    "madeby": "Nonna Lucia",
+    "origin": "Italy",
+    "description": "A classic Italian dish, Lasagna features layers of wide pasta sheets, Bolognese sauce made with ground meat and tomatoes, creamy béchamel sauce, and a generous amount of melted cheese."
+  }
+]

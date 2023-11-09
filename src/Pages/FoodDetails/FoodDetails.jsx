@@ -6,6 +6,7 @@ import swal from "sweetalert";
 
 const FoodDetails = () => {
   const loaderFoods = useLoaderData();
+
   //   console.log(loaderFoods);
   const { id } = useParams();
   const [foodItem, setFooditem] = useState([]);
@@ -19,7 +20,15 @@ const FoodDetails = () => {
     setFooditem(filterFood[0]);
   }, [loaderFoods, id]);
 
-  const cartinfo = { name, image, category, quantity, price, origin, madeby };
+  const cartinfo = {
+    name,
+    image,
+    category,
+    quantity,
+    price,
+    origin,
+    madeby,
+  };
 
   // handale add to cart
   const handleAddToCart = () => {

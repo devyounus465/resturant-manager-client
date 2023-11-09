@@ -6,8 +6,7 @@ import swal from "sweetalert";
 
 const Checkouts = ({ children }) => {
   const { user } = useContext(AuthContext);
-  const [count, setCount] = useState(0);
-  console.log(count);
+
   const [checkout, setcheckout] = useState([]);
   const { _id, name, image, category, quantity, price, description } = checkout;
 
@@ -223,7 +222,6 @@ const Checkouts = ({ children }) => {
                     <div className="sm:col-span-2">
                       <button
                         type="submit"
-                        onClick={() => setCount(count + 1)}
                         className="inline-flex items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-white transition-all duration-200 bg-[#F63701] border border-transparent rounded-md focus:outline-none hover:bg-[#ea5026] focus:bg-blue-700"
                       >
                         Send

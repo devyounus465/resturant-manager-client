@@ -8,7 +8,6 @@ const FoodOrder = () => {
   const loaderfoodCart = useLoaderData();
 
   const [foodCart, setFoodCart] = useState(loaderfoodCart);
-  console.log(foodCart);
 
   // handle cart delete
 
@@ -16,8 +15,6 @@ const FoodOrder = () => {
     axios.delete(`http://localhost:5000/cart/${id}`).then((res) => {
       console.log(res.data);
       if (res.data.deletedCount > 0) {
-        console.log("Cart Product deleted successfully");
-
         swal({
           title: "Good job!",
           text: "Cart Product deleted successfully!",
